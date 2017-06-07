@@ -1,3 +1,7 @@
+echo ""
+echo "----- Begin: StructuralPreprocessing.SetUp.sh -----"
+echo ""
+
 echo "Setting up FSL"
 export FSLDIR=/export/HCP/fsl-5.0.10-custom-20170526
 source ${FSLDIR}/etc/fslconf/fsl.sh
@@ -8,6 +12,8 @@ echo "Setting up FreeSurfer"
 export FSL_DIR="${FSLDIR}"
 export FREESURFER_HOME=/act/freesurfer-5.3.0-HCP
 source ${FREESURFER_HOME}/SetUpFreeSurfer.sh
+# modify LD_LIBRARY_PATH to allow access to libnetcdf.so.6
+export LD_LIBRARY_PATH=/export/HCP/lib:${LD_LIBRARY_PATH} 
 echo "Set up to use FreeSurfer at ${FREESURFER_HOME}"
 echo ""
 
@@ -18,7 +24,7 @@ echo "Set up to use EPD Python at ${EPD_PYTHON_HOME}"
 echo ""
 
 echo "Setting up Workbench (a.k.a. CARET7)"
-export CARET7DIR=/export/HCP/workbench-v1.2.3
+export CARET7DIR=/export/HCP/workbench-v1.2.3/bin_rh_linux64
 echo "Set up to use Workbench at ${CARET7DIR}"
 echo ""
 
@@ -45,4 +51,7 @@ echo ""
 echo "Setting up MSM Configuration Directory"
 export MSMCONFIGDIR=${HCPPIPEDIR}/MSMConfig
 echo "Set up to use MSM configuration at ${MSMCONFIGDIR}"
+echo ""
+
+echo "----- End: StructuralPreprocessing.SetUp.sh -----"
 echo ""
