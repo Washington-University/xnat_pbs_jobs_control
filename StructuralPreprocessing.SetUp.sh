@@ -12,7 +12,8 @@ echo "Setting up FreeSurfer"
 export FSL_DIR="${FSLDIR}"
 export FREESURFER_HOME=/act/freesurfer-5.3.0-HCP
 source ${FREESURFER_HOME}/SetUpFreeSurfer.sh
-# modify LD_LIBRARY_PATH to allow access to libnetcdf.so.6
+# modify LD_LIBRARY_PATH to allow access to libnetcdf.so.6 and libhdf5_hl.so.6
+# the mris_make_surfaces binary in the v5.3.0-HCP version of FreeSurfer needs these
 export LD_LIBRARY_PATH=/export/HCP/lib:${LD_LIBRARY_PATH} 
 echo "Set up to use FreeSurfer at ${FREESURFER_HOME}"
 echo ""
