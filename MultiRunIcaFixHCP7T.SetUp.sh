@@ -66,7 +66,7 @@ echo "Set up to use MSM configuration at ${MSMCONFIGDIR}"
 echo ""
 
 echo "Setting up ICAFIX Directory"
-export ICAFIX=${HOME}/pipeline_tools/fix1.064
+export ICAFIX=${HOME}/pipeline_tools/fix1.065
 echo "Set up to use ICAFIX directory ${ICAFIX}"
 echo ""
 
