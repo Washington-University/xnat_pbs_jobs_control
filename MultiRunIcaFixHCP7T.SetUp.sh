@@ -3,14 +3,20 @@ echo "----- Begin: MultiRunIcaFixHCP7T.SetUp.sh -----"
 echo ""
 
 echo "Setting up FSL"
-export FSLDIR=/export/HCP/fsl-5.0.10-custom-20170920
+export FSLDIR=/export/HCP/fsl-5.0.10-custom-20171103
+
 source ${FSLDIR}/etc/fslconf/fsl.sh
-if [[ $LD_LIBRARY_PATH == *"/export/HCP/lib"* ]]; then
-	echo "No need to add /export/HCP/lib to LD_LIBRARY_PATH because it's already there."
-else
-	export LD_LIBRARY_PATH=/export/HCP/lib:${LD_LIBRARY_PATH}
-	echo "Added /export/HCP/lib to LD_LIBRARY_PATH so libblas.so.3 can be found by custom melodic"
-fi
+# if [[ $LD_LIBRARY_PATH == *"/export/HCP/lib"* ]]; then
+# 	echo "No need to add /export/HCP/lib to LD_LIBRARY_PATH because it's already there."
+# else
+# 	export LD_LIBRARY_PATH=/export/HCP/lib:${LD_LIBRARY_PATH}
+# 	echo "Added /export/HCP/lib to LD_LIBRARY_PATH so libblas.so.3 can be found by custom melodic"
+# fi
+
+#blas_location=/export/HCP/lib/Matthew_Webster_blas
+#export LD_LIBRARY_PATH=${blas_location}:${LD_LIBRARY_PATH}
+#echo "Added ${blas_location} to LD_LIBRARY_PATH so libblas.so.3 can be found by custom melodic"
+
 echo "Set up to use FSL at ${FSLDIR}"
 echo ""
 
@@ -41,7 +47,7 @@ echo "Set up to use Workbench at ${CARET7DIR}"
 echo ""
 
 echo "Setting up HCP Pipelines"
-export HCPPIPEDIR=${HOME}/pipeline_tools/Pipelines_dev
+export HCPPIPEDIR=/export/HCP/Pipelines-3.23.0
 export HCPPIPEDIR_Config=${HCPPIPEDIR}/global/config
 export HCPPIPEDIR_Global=${HCPPIPEDIR}/global/scripts
 export HCPPIPEDIR_Templates=${HCPPIPEDIR}/global/templates
@@ -66,7 +72,7 @@ echo "Set up to use MSM configuration at ${MSMCONFIGDIR}"
 echo ""
 
 echo "Setting up ICAFIX Directory"
-export ICAFIX=${HOME}/pipeline_tools/fix1.065
+export ICAFIX=/export/HCP/fix1.065
 echo "Set up to use ICAFIX directory ${ICAFIX}"
 echo ""
 
