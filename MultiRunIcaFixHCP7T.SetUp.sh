@@ -47,7 +47,9 @@ echo "Set up to use Workbench at ${CARET7DIR}"
 echo ""
 
 echo "Setting up HCP Pipelines"
-export HCPPIPEDIR=/export/HCP/Pipelines-3.23.0
+#export HCPPIPEDIR=/export/HCP/Pipelines-3.23.0
+export HCPPIPEDIR=/home/HCPpipeline/pipeline_tools/Pipelines_dev
+
 export HCPPIPEDIR_Config=${HCPPIPEDIR}/global/config
 export HCPPIPEDIR_Global=${HCPPIPEDIR}/global/scripts
 export HCPPIPEDIR_Templates=${HCPPIPEDIR}/global/templates
