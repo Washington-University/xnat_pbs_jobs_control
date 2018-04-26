@@ -10,7 +10,7 @@ echo ""
 
 echo "Setting up FreeSurfer"
 export FSL_DIR="${FSLDIR}"
-#export FREESURFER_HOME=/export/HCP/freesurfer-6.0-custom-20171120
+#export FREESURFER_HOME=/export/HCP/freesurfer-6.0-custom-20180216
 export FREESURFER_HOME=/act/freesurfer-5.3.0-HCP
 source ${FREESURFER_HOME}/SetUpFreeSurfer.sh
 
@@ -27,7 +27,8 @@ echo "Set up to use EPD Python at ${EPD_PYTHON_HOME}"
 echo ""
 
 echo "Setting up Workbench (a.k.a. CARET7)"
-export CARET7DIR=/export/HCP/workbench-v1.2.3/bin_rh_linux64
+#export CARET7DIR=/export/HCP/workbench-v1.2.3/bin_rh_linux64
+export CARET7DIR=/export/HCP/workbench-dev-20180328/bin_rh_linux64
 echo "Set up to use Workbench at ${CARET7DIR}"
 echo ""
 
