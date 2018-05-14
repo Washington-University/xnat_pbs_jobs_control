@@ -3,7 +3,7 @@ echo "----- Begin: StructuralPreprocessing.SetUp.sh -----"
 echo ""
 
 echo "Setting up FSL"
-export FSLDIR=/export/HCP/fsl-5.0.11
+export FSLDIR=/export/fsl-5.0.11
 source ${FSLDIR}/etc/fslconf/fsl.sh
 echo "Set up to use FSL at ${FSLDIR}"
 echo ""
