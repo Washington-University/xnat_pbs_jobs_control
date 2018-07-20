@@ -29,13 +29,15 @@ echo ""
 echo "Setting up Workbench (a.k.a. CARET7)"
 #export CARET7DIR=/export/HCP/workbench-v1.2.3/bin_rh_linux64
 #export CARET7DIR=/export/HCP/workbench-dev-20180328/bin_rh_linux64
-export CARET7DIR=/export/HCP/workbench-v1.3.0/bin_rh_linux64
+#export CARET7DIR=/export/HCP/workbench-v1.3.0/bin_rh_linux64
+export CARET7DIR=/export/HCP/workbench-v1.3.1/bin_rh_linux64
 echo "Set up to use Workbench at ${CARET7DIR}"
 echo ""
 
 echo "Setting up HCP Pipelines"
 #export HCPPIPEDIR=${HOME}/pipeline_tools/Pipelines_dev
-export HCPPIPEDIR=/export/HCP/Pipelines_hotfix_v3.25.0
+#export HCPPIPEDIR=/export/HCP/Pipelines_hotfix_v3.25.0
+export HCPPIPEDIR=${HOME}/pipeline_tools/HCPpipelines
 export HCPPIPEDIR_Config=${HCPPIPEDIR}/global/config
 export HCPPIPEDIR_Global=${HCPPIPEDIR}/global/scripts
 export HCPPIPEDIR_Templates=${HCPPIPEDIR}/global/templates
